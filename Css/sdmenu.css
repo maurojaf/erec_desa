@@ -1,0 +1,45 @@
+div.sdmenu {
+	width: 150px;
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	padding-bottom: 19px;
+	background: url(../Imagenes/bottom.gif) no-repeat  right bottom;
+	color: #fff;
+}
+div.sdmenu div {
+	background: url(../Imagenes/title.gif) repeat-x;
+	overflow: hidden;
+}
+div.sdmenu div:first-child {
+	background: url(../Imagenes/toptitle1.gif) no-repeat;
+}
+div.sdmenu div.collapsed {
+	height: 22px;
+}
+div.sdmenu div span {
+	display: block;
+	padding: 4px 22px;
+	font-weight: bold;
+	color: white;
+	background: url(../Imagenes/expanded.gif) no-repeat 10px center;
+	cursor: default;
+	border-bottom: 1px solid #ddd;
+}
+div.sdmenu div.collapsed span {
+	background-image: url(../Imagenes/collapsed.gif);
+}
+div.sdmenu div a {
+	padding: 4px 10px;
+	background: #eee;
+	display: block;
+	border-bottom: 1px solid #ddd;
+	color: #066;
+}
+div.sdmenu div a.current {
+	background : #ccc;
+}
+div.sdmenu div a:hover {
+	background : #066 url(../Imagenes/linkarrow.gif) no-repeat right center;
+	color: #fff;
+	text-decoration: none;
+}

@@ -1,0 +1,131 @@
+/* Estilos para Prueba btnMuestra */
+
+html, body {
+	height:100%;
+	
+	margin:0;
+	padding:0;
+	
+	font-size: 12px;
+}
+
+/* VISIBILIDAD DE OBJETOS */
+.Visible {
+	display: block;
+}
+
+.NoVisible {
+	display: none;
+}
+
+/* ESTILO DE LA PAGINA */
+
+#ContainerPrincipal {
+	width: 100%;
+	height: calc(100% - 40px);
+	
+	position: relative;
+}
+
+#ContainerPrincipal #Menu {
+	width: auto;
+	height: 30px;
+	
+	position: absolute;
+	top: 10px;
+	right: 5%;
+	
+	text-align: left;
+}
+
+	#Menu .Boton {
+		width: auto;
+		height: 30px;
+		
+		padding-left: 10px;
+		padding-right: 10px;
+		
+		color: white;
+		font-size: 14px;
+		
+		background-color: #4b86b4;
+		
+		border: 0;
+	}
+
+	#Menu .Boton:hover {
+		background-color: #2a4d69;
+	}
+
+#ContainerPrincipal #Dialog {
+	font-size: 12px;
+	text-align: center;
+}
+
+#ContainerPrincipal #ContainerBloques {
+	width: 100%;
+	
+	position: absolute;
+	top: 50px;
+}
+
+#ContainerBloques table {
+	width: 90%;
+	height: 100%;
+	
+	position: relative;
+	left: 5%;
+	right: 5%;
+	
+	border-style: solid;
+	border-width: 1px;
+	
+	margin-bottom: 10px;
+}
+	table .Block {
+		width: 100%;
+		height: auto;
+	}
+	
+		table tr {
+			width: 100%;
+		}
+	
+		table td {
+			padding-left: 1%;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			
+			border-style: solid;
+			border-width: 1px;
+		}
+		
+		table .NombreAtributo {
+			width: 30%;
+			background-color: #c9def2;
+			
+			padding-left: 1%;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		
+		table .AtributoGris {
+			background-color: #F0F0F0;
+		}
+			
+		table .Title {		
+			background-color: #585858;
+			
+			font-size: 16px;
+			color: #FFFFFF;
+			
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 10px;
+			
+			border-color: #000000;
+		}
+	
+		table .TitleIcon {						
+			margin-right: 10px;
+		}

@@ -1,0 +1,238 @@
+.body_maasiva{
+            text-align: left;
+            width: 90%;
+            margin: 0px auto;
+            padding: 0px; 
+            margin-left:5%;
+            min-width: 1000px;
+
+        }
+
+        .table_masiva tbody tr td textarea{
+            font-size: 14px;
+            width:130px;
+            height:70px;
+            border:1px solid #fff;
+            margin: 0px;
+            overflow: auto;
+            font-family: "Verdana";
+            background-color:#FAFAFA;
+        } 
+
+        .input_listado{
+            width:130px;            
+            border:1px solid #ccc;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;            
+            border-bottom: 0px solid #fff;
+            margin: 0px;
+            margin-top: -2px;
+            font-family: "Verdana";
+            display: block;
+        }
+
+        .input_contador{
+            width:40px;            
+            border:1px solid #ccc;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;            
+            border-bottom: 0px solid #fff;
+            margin: 0px;
+            margin-top: -2px;
+            font-family: "Verdana";
+        }
+
+        .table_masiva{
+            border-collapse:collapse;
+            padding: 0; 
+            text-align: left;       
+            width: 30%;
+            display: inline;
+
+        }
+
+
+        .table_masiva thead tr th.class_campos{
+            border-right: 1px solid #ccc;
+            font-weight: normal;
+            width: 130px;
+            margin: 0px;
+
+        }
+
+        .table_masiva tbody tr td.class_campos{
+            font-weight: normal;
+            width: 130px;
+            margin: 0px;
+            text-align: left;
+
+        }
+
+        .table_masiva thead tr th.class_contador{
+            border-right: 1px solid #ccc;
+            font-weight: normal;
+            width: 40px;
+            margin: 0px;
+
+        }
+
+        .table_masiva tbody tr td.class_contador{
+            font-weight: normal;
+            width: 40px;
+            margin: 0px;
+            text-align: left;
+        }
+
+        .div_filtrado{
+            width:100%;
+            text-align: left;
+            font-family: "Verdana";  
+            font-size: 12px;
+            height: 30px;
+        }
+
+        #CB_COBRANZA{
+            width: 160px;
+            margin-left: 10px;
+            margin-RIGHT: 10px;
+        }
+
+        #tipo_gestion{
+            margin-left: 10px;
+            margin-RIGHT: 10px;
+            width: 450px;
+        }
+
+        #fecha_ingreso{
+            width:80px;
+        }
+
+        #hora_ingreso{
+            width:50px;
+        }
+
+
+        .table_opcion_masiva{
+            border-collapse:collapse;
+            padding: 0;
+            width: 100%;             
+        }
+
+        .table_opcion_masiva .class_campos{
+            border-right: 1px solid #ccc;
+            font-weight: normal;
+            width: 100%;
+            margin: 0px;
+            text-align: left;
+            height: 25px;
+        }
+
+        #id_usuario, #fecha_ingreso, #hora_ingreso, #observaciones{
+            width: 120px;
+            font-size: 12px;
+        }
+     
+        .div_opcion_masiva{
+            border:2px solid #ccc;
+            width: 15%;
+            float:left;
+        }
+
+        .div_masiva{
+            border:2px solid #ccc;
+            width: 84%;
+            float:left;
+        }
+
+        #procesar, #procesar_ingresa, #limpia_campo,#procesar_elimina { 
+            font-family: "Verdana"; 
+            font-size: 11px; 
+            font-weight: bold;   
+            background-color: #16428B; 
+            color: #FFFFFF;
+            border:1px #16428B solid;
+            cursor: pointer;
+            width: 130px;
+            height: 25px;
+
+        } 
+
+        .titulo_manual{
+            background-color: #E0F8F7;
+            color:#2E2E2E;
+            font-size: 14px;
+            text-align: center;
+            font-family: "verdana";
+            height: 30px;
+
+        }
+
+        .aviso_rojo{
+            font-size: 10px;
+            font-family: "Verdana";
+            color:#FA5858;
+        }
+
+        #textarea_fecha_ingreso, #textarea_hora_ingreso, #textarea_observacion, #textarea_id_usuario, #textarea_id_medio, #textarea_email{
+            overflow-x:hidden;
+
+        }
+
+        .td_seleect{
+            width: 100%;
+        }
+
+        .table_masiva_select{
+            border-collapse:collapse;
+            padding: 0; 
+            text-align: left;       
+            width: 100%;
+            display: inline;
+        }
+
+
+        .class_campos_select{
+            font-size: 14px;
+            border-right: 1px solid #ccc;
+            font-weight: normal;
+            width: 140px;
+            margin: 0px;
+            text-align: left;
+            height: 25px;            
+        }
+
+        .class_contador_select{
+            font-size: 12px;
+            border-right: 1px solid #ccc;
+            font-weight: normal;
+            width: 40px;
+            margin: 0px;
+            text-align: left;
+            font-family: "Verdana";
+            height: 25px; 
+        }
+
+        .class_registros{
+            font-size: 12px; 
+            color: #2E2E2E; 
+            font-family: "Verdana"; 
+            height: 22px; 
+        }
+
+        .div_accion{
+            background-color: #2ECCFA; height: 20px; width:70px; position: absolute; margin-left:50px;
+            padding: 3px; 
+            opacity: 0.8;
+            
+        }
+
+        img{
+            cursor: pointer;
+        }
+
+        #limpia_campo{
+            float:right;
+            text-align: center;
+            height: 25px;           
+   
+        }

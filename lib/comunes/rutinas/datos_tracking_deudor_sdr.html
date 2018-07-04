@@ -1,0 +1,13 @@
+<%
+If Trim(hdd_cod_cliente) <> "" Then
+	strNombreCliente = TraeNombreClienteSDR(conexionSDR,hdd_cod_cliente)
+End if
+If Trim(txt_NroDoc) <> "" and Trim(hdd_cod_cliente) <> "" Then
+	strSql=""
+	strSql="Select * From Gestion where ltrim(replace(SubString(Obs,1, charindex('::',obs)),':','')='" & trim(txt_NroDoc) & "'" 
+	rs.open strSql, conexionSDR
+	response.write strsql
+End If
+strTituloTabla = "DATOS DEUDOR"
+%>
+

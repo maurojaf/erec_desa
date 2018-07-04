@@ -1,0 +1,5 @@
+
+---- Copiar las imagenes del cd en la siguiente ruta 
+--- \\192.168.2.14\d$\app\EREC\Archivo\BibliotecaImagenesCuota\Cliente
+-- Cliente = "numero del cod Cliente"
+

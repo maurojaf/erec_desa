@@ -1,0 +1,89 @@
+/* ------------------
+ styling for the tables 
+   ------------------   */
+
+
+body
+{
+	line-height: 1.6em;
+}
+
+#principal
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	margin: 10px;
+	width: 800px;
+	text-align: center;
+	border-collapse: collapse;
+	border: 1px solid #69c;
+}
+
+#principal tbody
+{
+	background: #e8edff;
+}
+
+#principal th
+{
+	padding: 5px 5px 5px 5px;
+	font-weight: normal;
+	font-size: 14px;
+	font-color: #fff;
+	background: #c7c7ef;
+}
+
+#principal td
+{
+	padding: 1px;
+	color: #669;
+	border-top: 1px dashed #fff;
+}
+#principal tbody tr:hover td
+{
+	color: #339;
+	background: #d0dafd;
+}
+
+
+#principal-b
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 0px;
+	width: 800px;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #69c;
+}
+
+#principal-b tbody
+{
+	background: #e8edff;
+}
+
+#principal-b th
+{
+	padding: 5px 5px 5px 5px;
+	font-weight: normal;
+	font-size: 14px;
+	font-color: #fff;
+	background: #c7c7ef;
+}
+
+#principal-b td
+{
+	font-weight: normal;
+	font-size: 12px;
+	font-color: #000000;
+	
+	padding: 3px;
+	color: #669;
+	border-top: 1px dashed #fff;
+}
+#principal-b tbody tr:hover td
+{
+	color: #339;
+	background: #d0dafd;
+}
+
+
