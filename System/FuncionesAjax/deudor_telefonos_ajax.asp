@@ -7,7 +7,7 @@
     <link href="../css/normalize.css" rel="stylesheet">
 	<link href="../css/style.css" rel="stylesheet" type="text/css">
 	<link href="../css/style_generales_sistema.css" rel="stylesheet">
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!--#include file="../arch_utils.asp"-->
 <!--#include file="../../lib/comunes/rutinas/funciones.inc" -->
 <!--#include file="../../lib/lib.asp"-->
@@ -19,6 +19,10 @@ accion_ajax 		=request.querystring("accion_ajax")
 rut					=request.querystring("rut")
 intCodCliente=session("ses_codcli")
 
+	strToken = session("tokenID")
+	'Response.write "<br>TOKEN= hola" & strToken
+	
+
 'Response.write "<br>accion_ajax=" & accion_ajax
 'Response.write "<br>rut=" & rut
 
@@ -28,6 +32,7 @@ if trim(accion_ajax)="actualiza_CB_FONO_AGEND" then
 rut					=request.querystring("rut")
 
 %>
+
 <SELECT NAME="CB_FONO_AGEND" id="CB_FONO_AGEND">
 	<OPTION VALUE="0" >SELECCIONE</OPTION>
 	<%if fono_con="0" or fono_con="" then%>
@@ -215,12 +220,16 @@ cerrarscg()
 			
 			<td><div align="CENTER"><%=intCodigoArea%></div></td>	
 			<td align="center"><%=strTipoFono%></td>
+
+			<td>		
+<img src="../imagenes/priorizar_normal.png" border="5" onClick="llamar('961914768')">		
+</td>
 			
 		<%If intTipoSoftPhone="1" then%>
 			<td>
 				<div align="center">
 					<% j = 1 %>
-					<a href="sip:<%=SoloNumeros(strTelefonoDal)%>" title="
+					<a href="#" id="<%=SoloNumeros(strTelefonoDal)%>" onclick="llamar(<%=SoloNumeros(strTelefonoDal)%>)" title="
 					<% 	strLista = "SELECT CONTACTO FROM TELEFONO_CONTACTO WHERE RUT_DEUDOR = '"& RUT &"' AND ID_TELEFONO = '"& rsTel("ID_TELEFONO") &"' ORDER BY Fecha_ingreso DESC"
 						set rsLista = Conn.execute(strLista)
 						if not rsLista.Eof then
@@ -369,7 +378,7 @@ cerrarscg()
 			<td>
 				<div align="center">
 					<% j = 1 %>
-					<a href="sip:<%=SoloNumeros(strTelefonoDal)%>" title="
+					<a href="#" onclick="llamar(<%=SoloNumeros(strTelefonoDal)%>)" title="
 					<% 	strLista = "SELECT CONTACTO FROM TELEFONO_CONTACTO WHERE RUT_DEUDOR = '"& RUT &"' AND ID_TELEFONO = '"& rsTel("ID_TELEFONO") &"' ORDER BY Fecha_ingreso DESC"
 						set rsLista = Conn.execute(strLista)
 						if not rsLista.Eof then
@@ -521,4 +530,61 @@ end if
 	function ventanaGestionesFonos (URL){
 		window.open(URL,"DATOS2","width=1300, height=600, scrollbars=yes, menubar=no, location=no, resizable=yes")
 	}
+</script>
+
+<script type="text/javascript">
+		var userIDGlob;
+		var tokenFunc = "<%=strToken%>";
+	
+        // Funcion que separa los parametros de la URL cuando se envia el Token
+      
+
+        //Metodo que realiza la llamada al momento de llamar a la API
+
+        function getUserID() {
+            var UserID;
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.mypurecloud.com/api/v2/users/me",
+                "method": "GET",
+                "headers": {
+                    "Authorization": "Bearer "+ tokenFunc,
+                    "Cache-Control": "no-cache"
+                }
+            }
+		
+            $.ajax(settings).done(function (response) {
+                UserID = response.id;
+                userIDGlob = UserID;
+                return UserID;
+            });
+
+        }
+
+        getUserID();
+
+        function llamar(telefono) {
+            console.log(userIDGlob);
+			console.log(telefono);
+
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.mypurecloud.com/api/v2/conversations/calls",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + tokenFunc,
+                    "Cache-Control": "no-cache"
+                },
+                "processData": false,
+                "data": "{\n   \"phoneNumber\": \"" + telefono + "\"\n}"
+            }
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+
 </script>

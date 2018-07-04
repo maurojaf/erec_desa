@@ -1669,6 +1669,54 @@ datos.submit();
 	//gridLoad('divScroll','hdnScrollPos');
 </script>
 </form>
+	<%
+		
+		g =  Request.QueryString("g")
+		
+		
+		%>
+	<script type="text/javascript">
+
+var tipo_softphone = '<%=session("tipo_softphone")%>';
+var g = '<%= g %>';
+
+
+
+if(tipo_softphone == "1"){
+if(g != 'si'){
+			function getParameterByName(name) {
+				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				var regex = new RegExp("[\\#&]" +
+					name + "=([^&#]*)"),
+					results = regex.exec(location.hash);
+				return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g,
+					" "));
+			}
+			
+			
+			if (window.location.hash) {
+				console.log(location.hash);
+				var token = getParameterByName('access_token');
+				//location.hash = ''
+				alert(token);
+				
+				window.location.replace('FuncionesAjax/modulo_token_purecloud.asp?tokenID='+token)	
+				
+			} else {
+				var queryStringData = {
+					response_type: "token",
+					client_id: "92014f51-547f-4f04-af6d-0649e54ba879",
+					redirect_uri: "http://sistemas.llacruz.cl/erec_desa/System/principal.asp?EmpresaId=3"
+				}
+				console.log(queryStringData);
+				console.log(jQuery.param(queryStringData));
+				window.location.replace("https://login.mypurecloud.com/oauth/authorize?" + jQuery.param(queryStringData));
+			}
+}
+	}else{
+//alert("Sin PC");
+}		
+	</script>
 </body>
 </html>
 

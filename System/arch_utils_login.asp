@@ -24,7 +24,7 @@ Set Conn = Server.CreateObject("ADODB.Connection")
 
 Sub AbrirSCG()
 	Set Conn = Server.CreateObject("ADODB.Connection")
-	Conn.Open "driver=Sql server;Uid=login;Pwd=LoginLlacruz164;Database="&TRIM(Database)&";App=Sistema Operativo Microsoft Windows;Server=192.168.2.14"
+	Conn.Open "driver=Sql server;Uid=sa;Pwd=LlacruzhuelenPiso3;Database="&TRIM(Database)&";App=Sistema Operativo Microsoft Windows;Server=192.168.2.31"
 	Server.ScriptTimeout = 1800
 	Conn.CommandTimeOut = 10000
 	if err then 

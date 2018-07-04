@@ -1,0 +1,20 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\RESPALDO",
+    "\\RESPALDO\\Imagenes",
+    "\\RESPALDO\\Imagenes\\FichaDeudor",
+    "\\RESPALDO\\Imagenes\\FichaDeudor\\icon",
+    "\\RESPALDO\\lib",
+    "\\RESPALDO\\lib\\comunes",
+    "\\RESPALDO\\lib\\comunes\\rutinas",
+    "\\RESPALDO\\System",
+    "\\RESPALDO\\System\\FuncionesAjax",
+    "\\RESPALDO\\System\\FuncionesAjax\\FichaDeudor",
+    "\\System",
+    "\\System\\FuncionesAjax",
+    "\\System\\FuncionesAjax\\FichaDeudor"
+  ],
+  "SelectedNode": "\\System\\modulo_agendamiento_tactico.asp",
+  "PreviewInSolutionExplorer": false
+}

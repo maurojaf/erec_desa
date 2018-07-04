@@ -37,7 +37,7 @@ elseif trim(accion_ajax)="verifica_login" then
 	sql_sel= sql_sel & " apellido_materno, fecha_nacimiento, correo_electronico, telefono_contacto, "
 	sql_sel= sql_sel & " perfil, LOGIN, DECRYPTBYPASSPHRASE('C1traseña',CLAVE) CLAVE, PERFIL_ADM, perfil_cob, ACTIVO, perfil_proc, perfil_sup, "
 	sql_sel= sql_sel & " PERFIL_CAJA, perfil_emp, PERFIL_FULL, perfil_back, gestionador_preventivo, "
-	sql_sel= sql_sel & " anexo, observaciones_usuario, COD_AREA, CONVERT(VARCHAR(8),GETDATE(),108) AS HH , CONVERT(VARCHAR(10),GETDATE(),103) AS FH, substring(nombres_usuario,1,1)+substring(apellido_paterno,1,1)+SUBSTRING(rut_usuario, (len(substring(rut_usuario, 1, LEN(rut_usuario)-2))-3),4) CLAVE_AUTOMATICA "
+	sql_sel= sql_sel & " anexo, observaciones_usuario, COD_AREA, CONVERT(VARCHAR(8),GETDATE(),108) AS HH , CONVERT(VARCHAR(10),GETDATE(),103) AS FH, TIPO_SOFTPHONE, substring(nombres_usuario,1,1)+substring(apellido_paterno,1,1)+SUBSTRING(rut_usuario, (len(substring(rut_usuario, 1, LEN(rut_usuario)-2))-3),4) CLAVE_AUTOMATICA "
 	sql_sel= sql_sel & " FROM USUARIO "
 	sql_sel= sql_sel & " WHERE LOGIN='" & trim(login) & "' AND DECRYPTBYPASSPHRASE('C1traseña',CLAVE) = '" & trim(clave) & "' "
 
@@ -84,7 +84,7 @@ elseif trim(accion_ajax)="verifica_login" then
 			Else
 				session("permite_no_validar_fonos") = "S"
 			End If
-
+	'Variables de session desde BBDD
 			session("ses_clave") 		 =clave
 			session("ses_codcli") 		 =request("CB_CLIENTE")
 			session("session_idusuario") =rsUSU("ID_USUARIO")
@@ -99,6 +99,7 @@ elseif trim(accion_ajax)="verifica_login" then
 			session("perfil_cob") 		 =rsUSU("PERFIL_COB")
 			session("nombre_user") 		 =TRIM(rsUSU("NOMBRES_USUARIO")) & " " & TRIM(rsUSU("APELLIDO_PATERNO"))& " " & TRIM(rsUSU("APELLIDO_MATERNO"))
 			session("iniciosesion") 	 =rsUSU("FH") & " - " & rsUSU("HH")
+			session("tipo_softphone")	 =rsUSU("TIPO_SOFTPHONE")
 
 			strSql = "SELECT COD_CLIENTE FROM USUARIO_CLIENTE WHERE ID_USUARIO = " & session("session_idusuario")
 			set rsClientes=Conn.execute(strSql)

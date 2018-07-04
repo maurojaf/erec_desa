@@ -21,7 +21,7 @@ Set Conn2 = Server.CreateObject("ADODB.Connection")
 
 Sub AbrirSCG()
 	Set Conn = Server.CreateObject("ADODB.Connection")
-	Conn.Open "driver=Sql server;Uid=sa;Pwd=LlacruzhuelenPiso3;Database=" & trim(DATABASE) & ";App=Sistema Operativo Microsoft Windows;Server=192.168.2.14"
+	Conn.Open "driver=Sql server;Uid=sa;Pwd=LlacruzhuelenPiso3;Database=" & trim(DATABASE) & ";App=Sistema Operativo Microsoft Windows;Server=192.168.2.31"
 	Server.ScriptTimeout = 1800
 	Conn.CommandTimeOut = 10000
 End Sub
@@ -33,7 +33,7 @@ End Sub
 
 Sub AbrirSCG1()
 	Set Conn1 = Server.CreateObject("ADODB.Connection")
-	Conn1.Open "driver=Sql server;Uid=sa;Pwd=LlacruzhuelenPiso3;Database=" & trim(DATABASE) & ";App=Sistema Operativo Microsoft Windows;Server=192.168.2.14"
+	Conn1.Open "driver=Sql server;Uid=sa;Pwd=LlacruzhuelenPiso3;Database=" & trim(DATABASE) & ";App=Sistema Operativo Microsoft Windows;Server=192.168.2.31"
 	Server.ScriptTimeout = 1800
 	Conn1.CommandTimeOut = 10000
 End Sub
@@ -45,7 +45,7 @@ End Sub
 
 Sub AbrirSCG2()
 	Set Conn2 = Server.CreateObject("ADODB.Connection")
-	Conn2.Open "driver=Sql server;Uid=sa;Pwd=LlacruzhuelenPiso3;Database=" & trim(DATABASE) & ";App=Sistema Operativo Microsoft Windows;Server=192.168.2.14"
+	Conn2.Open "driver=Sql server;Uid=sa;Pwd=LlacruzhuelenPiso3;Database=" & trim(DATABASE) & ";App=Sistema Operativo Microsoft Windows;Server=192.168.2.31"
 	Server.ScriptTimeout = 1800
 	Conn2.CommandTimeOut = 10000
 End Sub
